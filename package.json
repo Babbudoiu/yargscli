@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Babbudoiu/yargscli#readme",
   "dependencies": {
+    "mongodb": "^4.0.0",
     "yargs": "^17.0.1"
   },
   "devDependencies": {
