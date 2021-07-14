@@ -10,7 +10,7 @@ const client = new MongoClient(process.env.MONGO_URI);
 const dbName = 'myProject';
 const command = process.argv[2];
 const yargs = require("yargs");
-const title = yargs.argv.movie;
+const title = yargs.argv.title;
 const actor = yargs.argv.actor;
 
 const app = async () => {
@@ -22,7 +22,7 @@ const app = async () => {
   if (command === "add") {
   await collection.insertOne({ title: title, actor: actor })
   } if (command === "delete") {
-   await  collection.deleteOne({ name: "dave"})
+   await  collection.deleteOne({ title: title, actor: actor })
   }
   client.close();
   
